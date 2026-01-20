@@ -13,24 +13,48 @@ st.set_page_config(
 )
 
 # --- 2. スタイル設定 (迷彩用: 白背景・ダークテキスト) ---
+# --- 2. スタイル設定 (迷彩用: 視認性改善版) ---
 st.markdown("""
     <style>
-        /* 全体の背景を白に */
+        /* 1. 全体の背景を白、基本文字色を濃いグレーに */
         .stApp {
             background-color: #ffffff;
             color: #333333;
         }
-        /* サイドバーを薄いグレーに */
+        
+        /* 2. サイドバーを薄いグレーに */
         section[data-testid="stSidebar"] {
             background-color: #f8f9fa;
         }
-        /* 文字色を強制的に黒っぽく */
-        h1, h2, h3, p, div, span {
-            color: #2c3e50;
-        }
-        /* メトリック（株価）の文字色 */
-        [data-testid="stMetricValue"] {
+        
+        /* 3. 見出しなどを強制的に黒く */
+        h1, h2, h3, p, label {
             color: #2c3e50 !important;
+        }
+        
+        /* 4. 【重要】プルダウン（Selectbox）の修正 */
+        div[data-baseweb="select"] > div {
+            background-color: #ffffff !important; /* 背景を白 */
+            color: #000000 !important;            /* 文字を黒 */
+            border: 1px solid #d1d1d1 !important; /* 枠線をグレーでくっきり */
+        }
+        
+        /* プルダウンの中の文字色 */
+        div[data-baseweb="select"] span {
+            color: #000000 !important;
+        }
+        
+        /* プルダウンを開いた時のリストの色 */
+        ul[data-baseweb="menu"] {
+            background-color: #ffffff !important;
+        }
+        ul[data-baseweb="menu"] li {
+            color: #000000 !important;
+        }
+
+        /* 5. メトリック（株価の数字）の色 */
+        [data-testid="stMetricValue"], [data-testid="stMetricLabel"] {
+            color: #000000 !important;
         }
     </style>
 """, unsafe_allow_html=True)
