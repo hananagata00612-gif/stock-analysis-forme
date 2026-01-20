@@ -59,7 +59,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.title("📊 Financial Data Visualizer (Alpha)")
+st.title("Financial Data Visualizer")
 
 # --- ★APIキー設定 ---
 API_KEY = "aaa2294ad1124462b54f453da3a8dc3b" 
