@@ -62,7 +62,7 @@ st.markdown("""
 st.title("📊 Financial Data Visualizer (Alpha)")
 
 # --- ★APIキー設定 ---
-API_KEY = "ここにTwelveDataのキーを貼ってください" 
+API_KEY = "aaa2294ad1124462b54f453da3a8dc3b" 
 
 # 銘柄リスト
 FAMOUS_STOCKS = {
