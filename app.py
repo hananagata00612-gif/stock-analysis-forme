@@ -227,7 +227,7 @@ else:
     # 判定ボックス (白背景に合わせて調整)
     st.markdown(f"""
     <div style="border: 2px solid {color}; padding: 15px; border-radius: 10px; margin: 20px 0; text-align: center; background-color: #f9f9f9;">
-        <h2 style="color: {color}; margin:0;">AI Verdict: {judgment}</h2>
+        <h2 style="color: {color}; margin:0;">AI予想: {judgment}</h2>
     </div>
     """, unsafe_allow_html=True)
     
